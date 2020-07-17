@@ -10,7 +10,7 @@ body {
 	background-size: cover;
 }
 
-#info-bar {
+#top-menu {
 	position: fixed;
 	top :0;
 	height: 25px;
@@ -25,7 +25,7 @@ body {
  
 #date {
 	position: absolute;
-	left: 700px;
+	left: 725px;
 }
 
 #sidebar {
@@ -38,14 +38,7 @@ body {
   background-color: rgba(0, 0, 0, 0.7);
   padding-top: 35px;
 }
-.sidebar a {
-margin : 5px;
-  padding: 6px 8px 6px 16px;
-  text-decoration: none;
-  font-size: 20px;
-  color: #818181;
-  display: block;
-}
+
 .img-icon {
 	height: 60px;
 	width: 60px;
@@ -55,6 +48,9 @@ margin : 5px;
 	background: rgba(250, 250, 250, 0.4);
 	border: 0px solid black;
 	border-radius: 4px;
+}
+.img-icon:active {
+	cursor: wait;
 }
 
 #menu-icon {
@@ -69,4 +65,65 @@ margin : 5px;
 	border: none;
 	background: none;
 	color : white;
+}
+
+
+#fs {
+	position: absolute;
+	right: 10px;
+	cursor: sw-resize;
+}
+
+main {
+	font-family: 'Orbitron', sans-serif;
+	font-size: 50px;
+	color: #fafafa;
+}
+
+
+#data {
+	position: absolute;
+	top: 35%;
+	left: 50%;
+}
+
+#data h1 {
+	overflow: hidden; /* Ensures the content is not revealed until the animation */
+  	border-right: .15em solid transparent; /* The typwriter cursor */
+  	white-space: nowrap; /* Keeps the content on a single line */
+  	margin: 0 auto; /* Gives that scrolling effect as the typing happens */
+  	letter-spacing: .15em; /* Adjust as needed */
+  	animation: 
+    typing 3.5s steps(30, end),
+    blink-caret .65s step-end 6;
+}
+
+@keyframes typing {
+  from { width: 0 }
+  to { width: 100% }
+}
+
+@keyframes blink-caret {
+  from, to { border-color: white }
+  50% { border-color: transparent; }
+}
+#devimg {
+	position: absolute;
+	top: 15%;
+	left: 15%;
+}
+
+#data h4 {
+	opacity: 0;
+	animation: 1s fade forwards;
+	animation-delay: 4s;
+}
+
+@keyframes fade {
+	from {
+		opacity: 0
+	} 
+	to {
+		opacity: 1;
+	}
 }
